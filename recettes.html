@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IMNA Gastronomique – Recettes</title>
+    <link rel="stylesheet" href="DOSSIER%20CSS/style.css">
+    <script defer src="DOSSIER%20JS/script.js" >
+
+    </script>
+</head>
+<body>
+ <header>
+    <div class="logo">
+        <img src="DOSSIER%20IMAGES/logo_imna.png"
+             alt="logo IMNA GASTRONOMIQUE"/>
+        <span>IMNA GASTRONOMIQUE</span>
+    </div>
+    <nav>
+        <a href="Index.html">Accueil</a>
+        <a href="recettes.html">Recettes</a>
+        <a href="recette.html">Une recette</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+ </header>
+ <section class="section">
+    <h1>Toutes les recettes</h1>
+    <div class="tools">
+        <input id="search" type="search" placeholder="Rechercher une recette..." aria-label="Rechercher" />
+        <label for="filter"></label><select id="filter">
+            <option value="">Toutes les catégories</option>
+            <option value="dessert">Dessert</option>
+            <option value="vegan">Vegan</option>
+            <option value="rapide">Rapide</option>
+            <option value="plat">Plat</option>
+            <option value="entree">Entrée</option>
+        </select>
+    </div>
+    <div id="recipesGrid" class="grid" aria-live="polite"></div>
+ </section>
+ <footer>© 2025 IMNA Gastronomique</footer>
+
+<script>
+    let DATA;
+    DATA = [
+        {
+            id: "risotto", title: "Risotto crémeux au parmesan",
+            img: "DOSSIER IMAGES/RISOTTO.jpg"
+            , category: "plat", tags: ["rapide"], desc: "Onctueux et parfumé, prêt en 30 min."
+        },
+        {
+            id: "tiramisu", title: "Tiramisu classique",
+            img: "DOSSIER IMAGES/TIRAMISSU.jpg"
+            , category: "dessert", tags: ["dessert"], desc: "Le dessert italien incontournable."
+        },
+        {
+            id: "bol vegan", title: "bol d'un plat vegan",
+            img: "DOSSIER IMAGES/plat vegan.jpg"
+            , category: "vegan", tags: ["rapide", "vegan"], desc: "Coloré, nutritif et prêt en 20 min."
+        },
+        {
+            id: "quiche", title: "Quiche aux légumes",
+            img: "DOSSIER IMAGES/QUICHE.jpg"
+            , category: "plat", tags: ["rapide", "vegan"], desc: "Simple, savoureuse et de saison."
+        },
+        {
+            id: "salade", title: "Salade César",
+            img: "DOSSIER IMAGES/SALADECESAR.jpg"
+            , category: "entree", tags: ["rapide"], desc: "Croquante et gourmande."
+        },
+        {
+            id: "fondant", title: "Fondant au chocolat",
+            img: "DOSSIER IMAGES/FONDANT.jpg"
+            , category: "dessert", tags: ["dessert"], desc: "Ultra moelleux, chocolat intense."
+        },
+        {
+            id: "couscous",
+            title: "Couscous Royal",
+            img: "DOSSIER IMAGES/COUSCOUS.jpg",
+            category: "plat",
+            tags: ["traditionnel"],
+            desc: "Un plat généreux et convivial, parfait pour les grandes tablées."
+        }
+    ];
+    initRecipeSearch(DATA);
+</script>
+ <script src="DOSSIER%20JS/script.js" defer></script>
+</body>
+</html>
